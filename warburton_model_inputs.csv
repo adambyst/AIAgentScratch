@@ -1,0 +1,20 @@
+parameter,value,description
+rent,3000,Monthly rent & utilities (AUD)
+np_salary,13000,NP total employment cost per month (salary + on-costs)
+visits_per_day,15,Average patient visits per operating day
+operating_days_per_month,22,Clinic open days per month
+pct_medicare,50,Percent of visits billed to Medicare (0-100)
+medicare_rebate,40,Average Medicare rebate per medicare visit (AUD)
+avg_private_fee,90,Average private fee charged per private visit (AUD)
+pathology_cost_per_test,25,Outsourced pathology cost per test (AUD)
+pct_pathology_tests_per_visit,0.10,Proportion of visits requiring a pathology test
+consumables_per_visit,10,Consumables/disposables cost per visit (AUD)
+admin_cost,5000,Reception/admin total cost per month (AUD)
+rn_support_cost,3000,Enrolled nurse / clinical support per month (AUD)
+insurance,700,Professional & public liability insurance per month (AUD)
+it_costs,500,IT / phone / software per month (AUD)
+marketing,1000,Marketing & outreach per month (AUD)
+cleaning,600,Cleaning / laundry per month (AUD)
+other_fixed,500,Other fixed monthly costs (AUD)
+
+# Notes: Edit these values to model different scenarios for Warburton urgent care.

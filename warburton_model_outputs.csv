@@ -1,0 +1,19 @@
+metric,value,notes
+monthly_visits,330,visits_per_day * operating_days_per_month
+medicare_visits,165,monthly_visits * pct_medicare
+private_visits,165,monthly_visits * (1 - pct_medicare)
+revenue_medicare,6600,medicare_visits * medicare_rebate
+revenue_private,14850,private_visits * avg_private_fee
+revenue_total,21450,revenue_medicare + revenue_private
+pathology_costs,825,monthly_visits * pct_pathology_tests_per_visit * pathology_cost_per_test
+consumables_costs,3300,monthly_visits * consumables_per_visit
+variable_costs,4125,pathology_costs + consumables_costs
+fixed_costs,27300,sum of fixed monthly costs from inputs
+gross_margin,17325,revenue_total - variable_costs
+net_operating,-9975,gross_margin - fixed_costs
+avg_rev_per_visit,65.0,revenue_total / monthly_visits
+var_cost_per_visit,12.5,variable_costs / monthly_visits
+break_even_visits_month,520.0,fixed_costs / (avg_rev_per_visit - var_cost_per_visit)
+break_even_visits_day,23.6,break_even_visits_month / operating_days_per_month
+
+# Notes: These outputs were computed from the default values in warburton_model_inputs.csv (rent=3000, np_salary=13000, visits_per_day=15, pct_medicare=50, avg_private_fee=90, etc.). Edit the inputs CSV and re-run `compute_warburton_model.py` to recalc.`
