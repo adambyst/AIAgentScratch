@@ -1,11 +1,11 @@
 
-import ollama
+from ollama import Ollama
 import logging
 import json
 import os
 from tools import tools_schema, available_functions
 
-client = Client()
+client = Ollama()
 
 logging.basicConfig(
     level=logging.INFO,
